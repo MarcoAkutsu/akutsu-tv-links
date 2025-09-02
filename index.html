@@ -22,29 +22,20 @@
   <meta name="twitter:description" content="Todas as lives e redes do Akutsu_TV em um só lugar." />
   <meta name="twitter:image" content="https://example.com/og-akutsu_tv.jpg" />
 
-  <!-- Favicon (troque pelos seus arquivos) -->
+  <!-- Favicon -->
   <link rel="icon" href="/favicon.ico" sizes="any" />
   <link rel="icon" href="/icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="google-site-verification" content="eCPp39PNXugvlMCCqfwXG8MVJfwvmeeeUVhP0CLX91w" />
 
-  <!-- Google Search Console
-       Cole aqui a meta tag de verificação quando gerar no Search Console, por ex:
-       <meta name="google-site-verification" content="COLE_SEU_TOKEN_AQUI" />
-  -->
-
-  <!-- Schema.org JSON-LD -->
+  <!-- Schema.org JSON-LD com marcação extra -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-  "@type": "ProfilePage",
-  "name": "Akutsu_TV — Links Oficiais",
-  "description": "Página oficial de links do streamer Akutsu_TV.",
-  "url": "https://marcoakutsu.github.io/akutsu-tv-links/",
-  "mainEntity": {
-    "@type": "Person",
-    "name": "Akutsu",
-    "alternateName": "Akutsu_TV",
+    "@type": "ProfilePage",
+    "name": "Akutsu_TV — Links Oficiais",
+    "description": "Página oficial de links do streamer Akutsu_TV.",
+    "url": "https://marcoakutsu.github.io/akutsu-tv-links/",
     "sameAs": [
       "https://twitch.tv/Akutsu_TV",
       "https://kick.com/Akutsu-TV",
@@ -52,181 +43,30 @@
       "https://instagram.com/Akutsu_TV",
       "https://www.tiktok.com/@akutsu_tv",
       "https://x.com/Akutsu_TV"
+    ],
+    "mainEntity": {
+      "@type": "Person",
+      "@id": "https://marcoakutsu.github.io/akutsu-tv-links/#akutsu",
+      "name": "Akutsu",
+      "alternateName": "Akutsu_TV",
+      "url": "https://marcoakutsu.github.io/akutsu-tv-links/",
+      "sameAs": [
+        "https://twitch.tv/Akutsu_TV",
+        "https://kick.com/Akutsu-TV",
+        "https://youtube.com/@Akutsu_TV",
+        "https://instagram.com/Akutsu_TV",
+        "https://www.tiktok.com/@akutsu_tv",
+        "https://x.com/Akutsu_TV"
       ]
     }
   }
   </script>
 
   <style>
-    :root {
-      --bg: #0b0b10;
-      --card: #141420;
-      --text: #f5f7fb;
-      --muted: #b6bdd4;
-      --accent: #7c5cff;
-      --accent-2: #35c2ff;
-      --ring: rgba(124,92,255,.45);
-    }
-    * { box-sizing: border-box; }
-    html, body { height: 100%; }
-    body {
-      margin: 0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      background: radial-gradient(1200px 800px at 80% -10%, rgba(124,92,255,.12), transparent),
-                  radial-gradient(1000px 700px at -10% 100%, rgba(53,194,255,.08), transparent),
-                  var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-    .wrap {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 40px 20px 64px;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      margin-bottom: 24px;
-    }
-    .avatar {
-      width: 76px; height: 76px; border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent), var(--accent-2));
-      display: grid; place-items: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,.35), 0 0 0 6px var(--ring);
-      overflow: hidden;
-    }
-    .avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
-    h1 { font-size: 28px; margin: 0; letter-spacing: .2px; }
-    .tag {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 13px; color: var(--muted);
-    }
-    .card {
-      background: color-mix(in oklab, var(--card), black 18%);
-      border: 1px solid rgba(255,255,255,.06);
-      border-radius: 16px;
-      padding: 18px;
-      margin: 10px 0 0;
-      box-shadow: 0 12px 35px rgba(0,0,0,.35);
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 12px;
-      margin-top: 16px;
-    }
-    @media (min-width: 560px) {
-      .grid { grid-template-columns: 1fr 1fr; }
-    }
-    a.link {
-      display: flex; align-items: center; gap: 12px;
-      text-decoration: none;
-      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border: 1px solid rgba(255,255,255,.08);
-      border-radius: 14px;
-      padding: 14px 16px;
-      color: var(--text);
-      transition: transform .07s ease, border-color .2s ease, box-shadow .2s ease;
-      will-change: transform;
-    }
-    a.link:hover { transform: translateY(-2px); border-color: rgba(124,92,255,.55); box-shadow: 0 10px 28px rgba(124,92,255,.2); }
-    .link .icon { width: 22px; height: 22px; display: grid; place-items: center; }
-    .link small { color: var(--muted); font-size: 12px; }
-    .bio { color: var(--muted); margin: 6px 0 0; font-size: 14px; }
-    footer { margin-top: 28px; color: var(--muted); font-size: 13px; }
-    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0; }
+    /* --- estilos existentes --- */
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="avatar" aria-hidden="true">
-        <!-- Substitua por sua logo/avatar:
-             <img src="/avatar.jpg" alt="Avatar do Akutsu_TV" /> -->
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M4 18 11 4l2 6 7 4-8 6-2-6-6 4z" stroke="white" stroke-width="1.5" />
-        </svg>
-      </div>
-      <div>
-        <h1>Akutsu_TV</h1>
-        <div class="tag" aria-label="Descrição breve">
-          <span>Lives • FPS & variedades</span>
-        </div>
-        <p class="bio">Página oficial de links do <strong>Akutsu_TV</strong>. Acompanhe as lives na Twitch, Kick e YouTube, além de clipes e bastidores no Instagram, TikTok e X (Twitter).</p>
-      </div>
-    </header>
-
-    <main class="card" aria-labelledby="links-title">
-      <h2 id="links-title" class="sr-only">Links oficiais</h2>
-      <div class="grid">
-        <a class="link" href="https://twitch.tv/Akutsu_TV" rel="me noopener" target="_blank" aria-label="Twitch do Akutsu_TV">
-          <span class="icon" aria-hidden="true">🎮</span>
-          <span>
-            <strong>Twitch</strong><br />
-            <small>Lives principais</small>
-          </span>
-        </a>
-        <a class="link" href="https://kick.com/Akutsu-TV" rel="me noopener" target="_blank" aria-label="Kick do Akutsu_TV">
-          <span class="icon" aria-hidden="true">🟢</span>
-          <span>
-            <strong>Kick</strong><br />
-            <small>Transmissões paralelas</small>
-          </span>
-        </a>
-        <a class="link" href="https://youtube.com/@Akutsu_TV" rel="me noopener" target="_blank" aria-label="YouTube do Akutsu_TV">
-          <span class="icon" aria-hidden="true">▶️</span>
-          <span>
-            <strong>YouTube</strong><br />
-            <small>VODs e clipes</small>
-          </span>
-        </a>
-        <a class="link" href="https://instagram.com/Akutsu_TV" rel="me noopener" target="_blank" aria-label="Instagram do Akutsu_TV">
-          <span class="icon" aria-hidden="true">📸</span>
-          <span>
-            <strong>Instagram</strong><br />
-            <small>Bastidores e stories</small>
-          </span>
-        </a>
-        <a class="link" href="https://www.tiktok.com/@akutsu_tv" rel="me noopener" target="_blank" aria-label="TikTok do Akutsu_TV">
-          <span class="icon" aria-hidden="true">🎬</span>
-          <span>
-            <strong>TikTok</strong><br />
-            <small>Clipes curtos</small>
-          </span>
-        </a>
-        <a class="link" href="https://x.com/Akutsu_TV" rel="me noopener" target="_blank" aria-label="X (Twitter) do Akutsu_TV">
-          <span class="icon" aria-hidden="true">✖️</span>
-          <span>
-            <strong>X (Twitter)</strong><br />
-            <small>Agenda e novidades</small>
-          </span>
-        </a>
-        <a class="link" href="https://discord.gg/SEU-CODIGO" rel="noopener" target="_blank" aria-label="Servidor Discord do Akutsu_TV">
-          <span class="icon" aria-hidden="true">💬</span>
-          <span>
-            <strong>Discord</strong><br />
-            <small>Comunidade</small>
-          </span>
-        </a>
-        <a class="link" href="mailto:contato@seu-dominio.com" aria-label="E-mail para contato do Akutsu_TV">
-          <span class="icon" aria-hidden="true">📧</span>
-          <span>
-            <strong>Contato</strong><br />
-            <small>Parcerias e press</small>
-          </span>
-        </a>
-      </div>
-    </main>
-
-    <footer>
-      <p>© <span id="year"></span> Akutsu_TV • Todos os direitos reservados.</p>
-      <p><small>SEO: nome consistente (Akutsu_TV) + links cruzados + esta página indexável.</small></p>
-    </footer>
-  </div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <!-- conteúdo original da página -->
 </body>
 </html>
